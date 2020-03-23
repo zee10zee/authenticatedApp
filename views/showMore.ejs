@@ -1,0 +1,29 @@
+
+<%- include("partials/header"); %>
+   <div class="card mb-4 text-center">
+    <div class="card-body">
+        <div class="card-title">
+             <h1><%= article.Title %></h1>
+        </div>
+        <div class="card-subtitle">
+            <p class="text-muted" style="font-size: 12px;">
+                <%= article.createdAt%>
+            </p>
+        </div>
+        <div class="card-image mb-4">
+            <img src="<%= article.Image %>" alt="">
+        </div>
+        <div class="card-description">
+            <p><%= article.Description %></p>
+            <a href="/articles/<%=article._id %>/edit" class="btn btn-warning">Edit</a>
+            <form class="d-inline" action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+                <button  class="btn btn-danger">Delete</button>
+            </form>
+            <a href="/articles" class="btn btn-primary d-inline">Back</a>
+        </div>
+      
+      
+    </div>
+</div>
+
+<%- include("partials/footer"); %>

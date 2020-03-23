@@ -1,0 +1,29 @@
+
+
+<%- include("partials/header") %>
+
+<h2>update <%= article.Title%></h2>
+<form action="/articles/<%= article._id %>/update?_method=PUT" method="POST" >
+    <div class="form-group">
+        <label for="">Title</label>
+   <input type="text" name = "title" value="<%= article.Title%>" placeholder="title" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">Image</label>
+   <input type="text" name = "image" value="<%= article.Image%>" placeholder="paste image Url" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">Content</label>
+    <textarea name="content"  placeholder="of the content!" class="form-control" 
+    required><%= article.Description%></textarea>
+    </div>
+    
+    <div class="form-group">
+        <button name="buttonNew" class="btn btn-success">Save</button>
+    </div>
+ 
+</form>
+
+<%- include("partials/footer") %>

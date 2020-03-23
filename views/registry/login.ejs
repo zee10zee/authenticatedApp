@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 class="my-3 text-light text-center">Welcome, Please Log In</h2>
+<form class="form-signin" action="/login" method="POST">
+  
+  <div class="form-group">
+    <input type="text" placeholder="user Name" name = "username" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <input type="password" placeholder="Password " name = "password" class="form-control">
+  </div>
+
+  <button class="btn btn-primary btn-block">Login</button>
+  <a href="/register">Not Registered ?</a>
+
+
+</form>
+
+</body>
+</html>
